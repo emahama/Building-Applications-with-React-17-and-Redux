@@ -1,6 +1,6 @@
-import webpack from "webpack";
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 process.env.NODE_ENV = "development"; // Tells babel plugin that we are running id dev mode
 
@@ -9,7 +9,7 @@ process.env.NODE_ENV = "development"; // Tells babel plugin that we are running 
 module.exports = {
   mode: "development", // Tell webpack to run in dev mode, this set node environment to development and dissable some production features
   target: "web", // We are using webpack to build and app running in the web (browser). if the app runs in node, this need to be set to node. Set to "web" since the app runs in a browser.
-  devTool: "cheap-module-source-map", // configure soure map for debugging. Maps the transpiled coded back to the original code we wrote when we view in the browser. Configure source maps for debugging.
+  devtool: "cheap-module-source-map", // configure soure map for debugging. Maps the transpiled coded back to the original code we wrote when we view in the browser. Configure source maps for debugging.
   entry: "./src/index", // Entry point for our application. Specify the entry point for the application.
 
   /**
