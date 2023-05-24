@@ -62,7 +62,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/, // Files webpack should process
         exclude: /node_modules/, // Files to exclude
-        use: ["babel-loader"], // Use babel to transpile and preprocess
+        use: ["babel-loader", "eslint-loader"], // Use babel to transpile and preprocess
       },
       {
         test: /(\.css)$/,
