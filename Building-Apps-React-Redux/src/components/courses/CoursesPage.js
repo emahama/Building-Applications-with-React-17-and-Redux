@@ -54,10 +54,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToActions = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(courseActions, dispatch),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToActions)(CoursesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
